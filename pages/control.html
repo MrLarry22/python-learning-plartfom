@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+}
+
+h1, h2, h3, h4 {
+    color: #007acc;
+}
+h1{
+    background: #007acc;
+    color: white;
+    font-size:2rem;
+    text-align: center;
+
+}
+pre {
+    background: #f1f1f1;
+    padding: 10px;
+    overflow-x: auto;
+    border-left: 5px solid #007acc;
+}
+
+code {
+    font-family: monospace;
+    background: #eef3f7;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+table, th, td {
+    border: 1px solid #007acc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+blockquote {
+    background: #eef6fc;
+    border-left: 5px solid #007acc;
+    margin: 1em 0;
+    padding: 10px;
+    font-style: italic;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.quote {
+    background-color: #eef6fc;
+    padding: 20px;
+    border-left: 5px solid #007acc;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+    </style>
+    <title>Python Control Structures</title>
+    <link rel="stylesheet" href="control_structures.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧭 <strong>Python Control Structures: A Complete Guide for Beginners</strong></h1>
+        <section>
+            <h2>🔍 What are Control Structures?</h2>
+            <p>Control structures <strong>govern the flow of execution</strong> in a Python program. Instead of running code line-by-line top to bottom, control structures let you <strong>make decisions</strong>, <strong>repeat actions</strong>, or <strong>skip parts</strong> based on conditions.</p>
+        </section>
+
+        <section>
+            <h2>📘 1. Conditional Statements</h2>
+            <h3>🧠 Concept:</h3>
+            <p>Conditional statements allow your program to <strong>make decisions</strong>.</p>
+
+            <h3>✅ Syntax:</h3>
+            <pre><code>if condition:
+    # code block
+elif another_condition:
+    # another block
+else:
+    # fallback block</code></pre>
+
+            <h3>🚀 Example:</h3>
+            <pre><code>age = 18
+if age >= 18:
+    print("You're eligible to vote.")
+else:
+    print("Sorry, you're too young to vote.")</code></pre>
+
+            <h3>💡 Real-World Use:</h3>
+            <ul>
+                <li>Checking login credentials</li>
+                <li>Determining pricing tiers</li>
+                <li>Running feature toggles</li>
+            </ul>
+
+            <h3>⚠️ Common Pitfall:</h3>
+            <blockquote>❌ <strong>Forgetting colons (`:`)</strong> or incorrect <strong>indentation</strong>.</blockquote>
+        </section>
+
+        <section>
+            <h2>🔁 2. Loops</h2>
+            <h3>🧵 A. <code>for</code> Loop</h3>
+            <pre><code>for item in iterable:
+    # code block</code></pre>
+
+            <h4>✅ Example:</h4>
+            <pre><code>fruits = ['apple', 'banana', 'cherry']
+for fruit in fruits:
+    print(f"I love {fruit}!")</code></pre>
+
+            <h4>🎯 Use Cases:</h4>
+            <ul>
+                <li>Iterating through files</li>
+                <li>Displaying data from a list</li>
+                <li>Running a function multiple times</li>
+            </ul>
+
+            <h3>🔄 B. <code>while</code> Loop</h3>
+            <pre><code>while condition:
+    # code block</code></pre>
+
+            <h4>✅ Example:</h4>
+            <pre><code>count = 1
+while count <= 5:
+    print(count)
+    count += 1</code></pre>
+
+            <h4>🧠 Good For:</h4>
+            <ul>
+                <li>Waiting for user input</li>
+                <li>Retry logic</li>
+                <li>Games or event loops</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧩 3. Loop Control Statements</h2>
+            <table>
+                <tr><th>Keyword</th><th>Function</th></tr>
+                <tr><td><code>break</code></td><td>Stops the loop completely</td></tr>
+                <tr><td><code>continue</code></td><td>Skips the current iteration</td></tr>
+                <tr><td><code>pass</code></td><td>Does nothing (placeholder)</td></tr>
+            </table>
+
+            <h3>🔨 <code>break</code> Example:</h3>
+            <pre><code>for num in range(1, 10):
+    if num == 5:
+        break
+    print(num)</code></pre>
+
+            <h3>🪁 <code>continue</code> Example:</h3>
+            <pre><code>for num in range(1, 6):
+    if num == 3:
+        continue
+    print(num)</code></pre>
+
+            <h3>💬 <code>pass</code> Example:</h3>
+            <pre><code>for letter in 'abc':
+    pass</code></pre>
+        </section>
+
+        <section>
+            <h2>🧱 4. Nested Control Structures</h2>
+            <pre><code>for i in range(1, 4):
+    if i % 2 == 0:
+        print(f"{i} is even")
+    else:
+        print(f"{i} is odd")</code></pre>
+
+            <h3>🔂 Nested Loops:</h3>
+            <pre><code>for i in range(1, 3):
+    for j in range(1, 3):
+        print(f"{i} x {j} = {i*j}")</code></pre>
+        </section>
+
+        <section>
+            <h2>🧠 Best Practices</h2>
+            <table>
+                <tr><th>✅ Best Practice</th><th>⚠️ Why It Matters</th></tr>
+                <tr><td>Use meaningful conditions</td><td>Improves readability</td></tr>
+                <tr><td>Avoid deeply nested code</td><td>Hard to debug and maintain</td></tr>
+                <tr><td>Don’t forget to update conditions</td><td>Prevents infinite loops</td></tr>
+                <tr><td>Use <code>break</code> wisely</td><td>Avoid logic errors</td></tr>
+                <tr><td>Use <code>pass</code> when needed</td><td>Manages unfinished code</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>❌ Common Mistakes</h2>
+            <table>
+                <tr><th>Mistake</th><th>Explanation</th></tr>
+                <tr><td>Using <code>=</code> instead of <code>==</code></td><td><code>=</code> assigns; <code>==</code> compares</td></tr>
+                <tr><td>Incorrect indentation</td><td>Python uses indentation to define blocks</td></tr>
+                <tr><td>Infinite <code>while</code> loop</td><td>Condition never becomes False</td></tr>
+                <tr><td>Skipping <code>else</code> logic</td><td>Might skip necessary fallback code</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>🧪 Try It Yourself</h2>
+
+            <h3>🔁 Voting System:</h3>
+            <pre><code>age = int(input("Enter your age: "))
+if age >= 18:
+    print("✅ You can vote.")
+else:
+    print("❌ You must be at least 18 to vote.")</code></pre>
+
+            <h3>🔂 Countdown with <code>while</code>:</h3>
+            <pre><code>num = 5
+while num > 0:
+    print(num)
+    num -= 1
+print("🚀 Liftoff!")</code></pre>
+
+            <h3>🔁 Even Numbers:</h3>
+            <pre><code>for i in range(1, 11):
+    if i % 2 != 0:
+        continue
+    print(i)</code></pre>
+
+            <h3>🧱 Nested Loops Grid:</h3>
+            <pre><code>for row in range(1, 4):
+    for col in range(1, 4):
+        print(f"({row}, {col})", end=" ")
+    print()</code></pre>
+        </section>
+
+        <section>
+            <h2>🧠 Review Checklist</h2>
+            <ul>
+                <li>✅ Know which control structure to use?</li>
+                <li>✅ Avoid infinite loops?</li>
+                <li>✅ Confident using <code>break</code>, <code>continue</code>, <code>pass</code>?</li>
+                <li>✅ Practiced nested loops and conditionals?</li>
+            </ul>
+        </section>
+
+        <section class="quote">
+            <p>💬 <em>“Control structures are like the steering wheel of your code — they determine where it goes and how it behaves. Master them, and you master control.”</em></p>
+        </section>
+        <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Operators and Expressions</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #007acc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #007acc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007acc;
+  color: white;
+}
+
+pre {
+  background: #eef6fb;
+  padding: 10px;
+  border-left: 4px solid #007acc;
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 4px solid #007acc;
+  margin: 20px 0;
+  padding-left: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Python Operators and Expressions</h1>
+
+    <section>
+      <h2>📌 1. What are Operators and Expressions?</h2>
+      <ul>
+        <li><strong>Operators</strong> perform operations on variables and values.</li>
+        <li>An <strong>expression</strong> is a combination of values, variables, and operators that Python evaluates to produce another value.</li>
+      </ul>
+      <pre><code>x = 5 + 3  # Expression: 5 + 3 → 8</code></pre>
+    </section>
+
+    <section>
+      <h2>➕ 2. Arithmetic Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr>
+        <tr><td>+</td><td>Addition</td><td>5 + 2</td><td>7</td></tr>
+        <tr><td>-</td><td>Subtraction</td><td>5 - 2</td><td>3</td></tr>
+        <tr><td>*</td><td>Multiplication</td><td>5 * 2</td><td>10</td></tr>
+        <tr><td>/</td><td>Division</td><td>5 / 2</td><td>2.5</td></tr>
+        <tr><td>//</td><td>Floor Division</td><td>5 // 2</td><td>2</td></tr>
+        <tr><td>%</td><td>Modulus</td><td>5 % 2</td><td>1</td></tr>
+        <tr><td>**</td><td>Exponentiation</td><td>2 ** 3</td><td>8</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🧮 3. Comparison Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr>
+        <tr><td>==</td><td>Equal to</td><td>5 == 5</td><td>True</td></tr>
+        <tr><td>!=</td><td>Not equal to</td><td>5 != 3</td><td>True</td></tr>
+        <tr><td>></td><td>Greater than</td><td>5 > 3</td><td>True</td></tr>
+        <tr><td><</td><td>Less than</td><td>5 < 3</td><td>False</td></tr>
+        <tr><td>>=</td><td>Greater or equal</td><td>5 >= 5</td><td>True</td></tr>
+        <tr><td><=</td><td>Less or equal</td><td>3 <= 2</td><td>False</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔗 4. Logical Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr>
+        <tr><td>and</td><td>Returns True if both are True</td><td>True and False</td><td>False</td></tr>
+        <tr><td>or</td><td>Returns True if one is True</td><td>True or False</td><td>True</td></tr>
+        <tr><td>not</td><td>Inverts the result</td><td>not True</td><td>False</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>📝 5. Assignment Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Example</th><th>Equivalent To</th></tr>
+        <tr><td>=</td><td>x = 5</td><td>Assigns 5 to x</td></tr>
+        <tr><td>+=</td><td>x += 3</td><td>x = x + 3</td></tr>
+        <tr><td>-=</td><td>x -= 2</td><td>x = x - 2</td></tr>
+        <tr><td>*=</td><td>x *= 4</td><td>x = x * 4</td></tr>
+        <tr><td>/=</td><td>x /= 2</td><td>x = x / 2</td></tr>
+        <tr><td>%=</td><td>x %= 2</td><td>x = x % 2</td></tr>
+        <tr><td>//=</td><td>x //= 2</td><td>x = x // 2</td></tr>
+        <tr><td>**=</td><td>x **= 2</td><td>x = x ** 2</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔍 6. Identity Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Example</th><th>Result</th></tr>
+        <tr><td>is</td><td>a is b</td><td>True if both refer to the same object</td></tr>
+        <tr><td>is not</td><td>a is not b</td><td>True if different objects</td></tr>
+      </table>
+      <pre><code>a = [1, 2]\nb = a\nc = [1, 2]\nprint(a is b)  # True\nprint(a is c)  # False</code></pre>
+    </section>
+
+    <section>
+      <h2>📦 7. Membership Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Example</th><th>Result</th></tr>
+        <tr><td>in</td><td>"a" in "cat"</td><td>True</td></tr>
+        <tr><td>not in</td><td>3 not in [1, 2]</td><td>True</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🧠 8. Bitwise Operators (Advanced)</h2>
+      <table>
+        <tr><th>Operator</th><th>Name</th><th>Example</th><th>Result</th></tr>
+        <tr><td>&</td><td>AND</td><td>5 & 3</td><td>1</td></tr>
+        <tr><td>|</td><td>OR</td><td>5 | 3</td><td>7</td></tr>
+        <tr><td>^</td><td>XOR</td><td>5 ^ 3</td><td>6</td></tr>
+        <tr><td>~</td><td>NOT</td><td>~5</td><td>-6</td></tr>
+        <tr><td><<</td><td>Left shift</td><td>5 << 1</td><td>10</td></tr>
+        <tr><td>>></td><td>Right shift</td><td>5 >> 1</td><td>2</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🧮 9. Operator Precedence</h2>
+      <ol>
+        <li>() – Parentheses</li>
+        <li>** – Exponentiation</li>
+        <li>+x, -x, ~x – Unary</li>
+        <li>*, /, //, %</li>
+        <li>+, -</li>
+        <li><<, >></li>
+        <li>&</li>
+        <li>^</li>
+        <li>|</li>
+        <li>==, !=, >, <, >=, <=</li>
+        <li>not</li>
+        <li>and</li>
+        <li>or</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>⚠️ 10. Common Mistakes to Avoid</h2>
+      <table>
+        <tr><th>Mistake</th><th>Why it's wrong</th></tr>
+        <tr><td>if x = 5:</td><td>Use ==, not = in comparisons</td></tr>
+        <tr><td>"2" + 3</td><td>Mixing string and integer → TypeError</td></tr>
+        <tr><td>Using is instead of ==</td><td>is compares identity, not value</td></tr>
+        <tr><td>Not using parentheses properly</td><td>Can change result of expression</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>✅ 11. Practice Exercises</h2>
+      <h3>🧠 Expression Evaluation</h3>
+      <pre><code>x = 10\ny = 3\nresult = x * y + 2\nprint(result)  # Output: 32</code></pre>
+
+      <h3>🔍 Check Your Understanding</h3>
+      <pre><code>a = 10\nb = 20\nprint(a > 5 and b < 30)  # True\nprint(not (a == b))      # True</code></pre>
+
+      <h3>🛠️ Modify and Fix</h3>
+      <pre><code># Fix this error\nx = \"5\"\ny = 2\nprint(int(x) + y)</code></pre>
+    </section>
+
+    <section>
+      <h2>🌟 12. Final Tips</h2>
+      <ul>
+        <li>✅ Memorize the operator categories</li>
+        <li>✅ Always convert types before operations</li>
+        <li>✅ Use parentheses for clarity</li>
+        <li>❌ Don’t rely on guesswork for precedence</li>
+      </ul>
+      <blockquote>💬 <em>\"Understanding operators is like learning how to drive your code. Master them, and you'll control how everything flows.\"</em></blockquote>
+    </section>
+    <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+  </div>
+</body>
+</html>

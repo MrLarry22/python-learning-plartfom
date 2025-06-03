@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python Functions - Beginner Guide</title>
+  <link rel="stylesheet" href="functions.css">
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-left: 5px solid #007acc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #007acc;
+}
+h1{
+  background: #007acc;
+  color:white;
+  font-size:3rem;
+  text-align: center;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
+  border-left: 4px solid #007acc;
+  font-size: 0.95em;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background: #e8f3fc;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #007acc;
+  color: white;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  padding: 8px;
+}
+
+ul {
+  list-style-type: '✅ ';
+  padding-left: 20px;
+}
+
+blockquote {
+  background: #e8f3fc;
+  border-left: 5px solid #007acc;
+  margin: 20px 0;
+  padding: 10px 15px;
+  font-style: italic;
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🧠 Python Functions: A Complete Guide for Beginners</h1>
+    
+    <section>
+      <h2>🔍 What is a Function?</h2>
+      <p>A <strong>function</strong> is a reusable block of code that performs a specific task. Functions help organize programs into smaller, manageable parts.</p>
+    </section>
+
+    <section>
+      <h2>🛠️ 1. Defining a Function</h2>
+      <h3>✅ Syntax:</h3>
+      <pre><code>def function_name():
+    # code block</code></pre>
+
+      <h3>💡 Example:</h3>
+      <pre><code>def greet():
+    print("Hello, Python learner!")</code></pre>
+
+      <h3>📞 Calling the Function:</h3>
+      <pre><code>greet()  # Output: Hello, Python learner!</code></pre>
+    </section>
+
+    <section>
+      <h2>🧳 2. Parameters and Arguments</h2>
+      <h3>✅ Syntax with Parameters:</h3>
+      <pre><code>def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")  # Output: Hello, Alice!</code></pre>
+
+      <h3>🔄 Types of Arguments:</h3>
+      <table>
+        <tr><th>Type</th><th>Example</th><th>Description</th></tr>
+        <tr><td>Positional</td><td>greet("Bob")</td><td>Matches by position</td></tr>
+        <tr><td>Keyword</td><td>greet(name="Tom")</td><td>Matches by name</td></tr>
+        <tr><td>Default</td><td>def greet(name="Guest")</td><td>Uses default if not provided</td></tr>
+        <tr><td>Variable-length</td><td>*args, **kwargs</td><td>Multiple positional or keyword args</td></tr>
+      </table>
+
+      <h3>🧪 Example with <code>*args</code> and <code>**kwargs</code>:</h3>
+      <pre><code>def show_details(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+show_details(1, 2, name="Alice", age=25)</code></pre>
+    </section>
+
+    <section>
+      <h2>🎯 3. Return Statement</h2>
+      <h3>📦 Purpose:</h3>
+      <p>Functions can <strong>return a value</strong> using the <code>return</code> statement.</p>
+      <pre><code>def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # Output: 8</code></pre>
+
+      <p><strong>📌 Note:</strong> Functions without <code>return</code> implicitly return <code>None</code>.</p>
+    </section>
+
+    <section>
+      <h2>🧱 4. Built-in vs User-Defined Functions</h2>
+      <table>
+        <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+        <tr><td>Built-in</td><td>Provided by Python</td><td>len(), sum()</td></tr>
+        <tr><td>User-defined</td><td>Written by programmers</td><td>def my_func():</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔐 5. Variable Scope</h2>
+      <h3>🧠 Scope Rules:</h3>
+      <table>
+        <tr><th>Scope</th><th>Description</th></tr>
+        <tr><td>Local</td><td>Defined inside a function</td></tr>
+        <tr><td>Global</td><td>Defined outside all functions</td></tr>
+      </table>
+
+      <h3>⚠️ Example:</h3>
+      <pre><code>x = 10  # Global
+
+def func():
+    x = 5  # Local
+    print("Inside:", x)
+
+func()
+print("Outside:", x)</code></pre>
+
+      <p><strong>Output:</strong></p>
+      <pre><code>Inside: 5
+Outside: 10</code></pre>
+
+      <h3>🔓 Using <code>global</code>:</h3>
+      <pre><code>x = 10
+
+def modify():
+    global x
+    x = 20
+
+modify()
+print(x)  # Output: 20</code></pre>
+    </section>
+
+    <section>
+      <h2>⚡ 6. Lambda (Anonymous) Functions</h2>
+      <p>Short functions without a name. Used for small, one-time operations.</p>
+      <pre><code>square = lambda x: x ** 2
+print(square(4))  # Output: 16</code></pre>
+    </section>
+
+    <section>
+      <h2>📚 7. Function Documentation (Docstrings)</h2>
+      <p>To explain <strong>what a function does</strong>. Helps others (and you) understand your code later.</p>
+      <pre><code>def multiply(a, b):
+    """Multiply two numbers and return the result."""
+    return a * b
+
+help(multiply)</code></pre>
+    </section>
+
+    <section>
+      <h2>🧩 8. Best Practices</h2>
+      <table>
+        <tr><th>✅ Practice</th><th>💬 Why It Matters</th></tr>
+        <tr><td>Use descriptive function names</td><td>Improves readability</td></tr>
+        <tr><td>Keep functions short</td><td>Easier to debug and reuse</td></tr>
+        <tr><td>Document your functions</td><td>Helps collaboration and understanding</td></tr>
+        <tr><td>Return values explicitly</td><td>Makes function behavior predictable</td></tr>
+        <tr><td>Use default arguments wisely</td><td>Improves flexibility and prevents errors</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔍 9. Common Mistakes to Avoid</h2>
+      <table>
+        <tr><th>❌ Mistake</th><th>🧠 Problem</th></tr>
+        <tr><td>Forgetting parentheses when calling a function</td><td>Function doesn’t execute</td></tr>
+        <tr><td>Reusing variable names carelessly</td><td>Can lead to scope bugs</td></tr>
+        <tr><td>Not returning a value when needed</td><td>Returns None instead of useful data</td></tr>
+        <tr><td>Using mutable default arguments</td><td>Can lead to unexpected behavior</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔧 10. Practical Use Cases</h2>
+      <table>
+        <tr><th>Scenario</th><th>Function Example</th></tr>
+        <tr><td>Math operations</td><td>def calculate_area(radius):</td></tr>
+        <tr><td>Data validation</td><td>def is_valid_email(email):</td></tr>
+        <tr><td>Processing user input</td><td>def process_input(input_str):</td></tr>
+        <tr><td>Modular scripting</td><td>Breaking big tasks into smaller helpers</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🧪 11. Practice Exercises</h2>
+
+      <h3>✅ Greeting Function</h3>
+      <pre><code>def greet_user(name):
+    print(f"Hello, {name}!")
+
+greet_user("Leo")</code></pre>
+
+      <h3>✅ Sum Two Numbers</h3>
+      <pre><code>def add(a, b):
+    return a + b
+
+print(add(10, 20))</code></pre>
+
+      <h3>🧠 Factorial Function</h3>
+      <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))</code></pre>
+
+      <h3>🧠 Variable Argument Function</h3>
+      <pre><code>def total(*numbers):
+    return sum(numbers)
+
+print(total(1, 2, 3, 4))</code></pre>
+
+      <h3>🧠 Lambda and Sorting</h3>
+      <pre><code>items = [('apple', 3), ('banana', 2), ('cherry', 5)]
+sorted_items = sorted(items, key=lambda item: item[1])
+print(sorted_items)</code></pre>
+    </section>
+
+    <section>
+      <h2>📌 12. Review Checklist</h2>
+      <ul>
+        <li>✅ Can you define and call a function?</li>
+        <li>✅ Do you understand parameters vs arguments?</li>
+        <li>✅ Can you return and use values from functions?</li>
+        <li>✅ Do you know when to use lambda functions?</li>
+        <li>✅ Can you identify local vs global variables?</li>
+        <li>✅ Are your functions documented?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💬 Final Wisdom</h2>
+      <blockquote>🧠 “Functions are the building blocks of clean, efficient code. Master them, and you’ll write software that’s not only functional — but beautiful.”</blockquote>
+    </section>
+    <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+</body>
+</html>

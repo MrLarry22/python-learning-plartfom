@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python OOP Guide</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 40px 20px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-top: 6px solid #007acc;
+}
+
+h1, h2, h3 {
+  color: #007acc;
+}
+h1{
+    background:#007acc;
+    color:white ;
+    font-size:3rem;
+}
+
+code {
+  background-color: #eef6fb;
+  color: #d63384;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+pre {
+  background-color: #eef6fb;
+  padding: 12px;
+  border-left: 4px solid #007acc;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1 rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #007acc;
+  color: white;
+}
+
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px dashed #007acc;
+}
+
+blockquote {
+  background: #eef6fb;
+  padding: 16px;
+  border-left: 5px solid #007acc;
+  font-style: italic;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧱 Python Object Oriented Programming (OOP): A Complete Guide</h1>
+
+    <section>
+      <h2>🔍 What is Object Oriented Programming?</h2>
+      <p>Object Oriented Programming (OOP) is a <strong>programming paradigm</strong> based on the concept of <strong>"objects"</strong>, which can contain <strong>data (attributes)</strong> and <strong>functions (methods)</strong>.</p>
+      <p>Python is an object-oriented language, meaning almost everything in Python is an object!</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧩 1. Classes and Objects</h2>
+      <h3>🧠 Definition</h3>
+      <ul>
+        <li><strong>Class</strong>: A blueprint for creating objects.</li>
+        <li><strong>Object</strong>: An instance of a class.</li>
+      </ul>
+      <h3>✅ Syntax</h3>
+      <pre><code class="language-python">class Dog:
+    pass
+
+my_dog = Dog()</code></pre>
+      <h3>🐶 Real-World Analogy</h3>
+      <p>Think of a <strong>class</strong> as the blueprint for a house, and an <strong>object</strong> as the actual house built from that blueprint.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧰 2. Attributes and Methods</h2>
+      <h3>🧠 Attributes</h3>
+      <pre><code class="language-python">class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age</code></pre>
+
+      <h3>⚙️ Methods</h3>
+      <pre><code class="language-python">    def bark(self):
+        print(f"{self.name} says Woof!")</code></pre>
+
+      <pre><code class="language-python">dog1 = Dog("Buddy", 3)
+dog1.bark()  # Output: Buddy says Woof!</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🏗️ 3. Constructor Method (__init__)</h2>
+      <h3>🧠 Purpose</h3>
+      <p>The <code>__init__()</code> method runs <strong>automatically</strong> when an object is created.</p>
+      <pre><code class="language-python">class Car:
+    def __init__(self, model):
+        self.model = model
+
+car1 = Car("Toyota")
+print(car1.model)  # Output: Toyota</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🔐 4. Encapsulation & Data Hiding</h2>
+      <h3>🧠 What is Encapsulation?</h3>
+      <p>Encapsulation is the <strong>bundling of data and methods</strong> into a single unit — the object.</p>
+
+      <h3>🔒 Private Attributes</h3>
+      <pre><code class="language-python">class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # private attribute
+
+    def get_balance(self):
+        return self.__balance</code></pre>
+
+      <h3>🚫 Pitfall</h3>
+      <p><code>__balance</code> is name-mangled and becomes <code>_ClassName__balance</code>.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧬 5. Inheritance</h2>
+      <h3>🧠 Definition</h3>
+      <pre><code class="language-python">class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+pet = Dog()
+pet.speak()  # Output: Dog barks</code></pre>
+
+      <h3>🔁 Types of Inheritance</h3>
+      <ul>
+        <li>Single</li>
+        <li>Multiple</li>
+        <li>Multilevel</li>
+        <li>Hierarchical</li>
+      </ul>
+
+      <h3>🧠 Multiple Inheritance Example</h3>
+      <pre><code class="language-python">class A:
+    def show(self):
+        print("A")
+
+class B:
+    def display(self):
+        print("B")
+
+class C(A, B):
+    pass
+
+obj = C()
+obj.show()
+obj.display()</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🎭 6. Polymorphism</h2>
+      <h3>🧠 What is it?</h3>
+      <pre><code class="language-python">class Cat:
+    def sound(self):
+        print("Meow")
+
+class Dog:
+    def sound(self):
+        print("Bark")
+
+for pet in (Cat(), Dog()):
+    pet.sound()</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧼 7. Abstract Classes and Methods</h2>
+      <pre><code class="language-python">from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+class Car(Vehicle):
+    def start(self):
+        print("Car engine started")</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧙‍♂️ 8. Special (Magic/Dunder) Methods</h2>
+      <pre><code class="language-python">class Book:
+    def __init__(self, title):
+        self.title = title
+
+    def __str__(self):
+        return f"Book: {self.title}"
+
+b = Book("Python 101")
+print(b)  # Output: Book: Python 101</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧱 9. Class Relationships: Composition vs Aggregation</h2>
+
+      <h3>🧠 Composition</h3>
+      <pre><code class="language-python">class Engine:
+    def start(self):
+        print("Engine starting...")
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()</code></pre>
+
+      <h3>🧠 Aggregation</h3>
+      <pre><code class="language-python">class Engine:
+    pass
+
+class Car:
+    def __init__(self, engine):
+        self.engine = engine</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>📏 10. Best Practices</h2>
+      <table>
+        <thead>
+          <tr><th>✅ Practice</th><th>💬 Why It Matters</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Use <code>__init__</code> for initialization</td><td>Ensures objects start with valid state</td></tr>
+          <tr><td>Keep methods short and focused</td><td>Improves readability and maintainability</td></tr>
+          <tr><td>Use encapsulation for data safety</td><td>Avoids accidental data corruption</td></tr>
+          <tr><td>Favor composition over inheritance</td><td>Increases flexibility and reusability</td></tr>
+          <tr><td>Use meaningful names</td><td>Makes code self-explanatory</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>🧪 Practice Exercises</h2>
+
+      <h3>✅ Beginner: Create a Class</h3>
+      <pre><code class="language-python">class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hello, {self.name}!")
+
+s = Student("Alice")
+s.greet()</code></pre>
+
+      <h3>✅ Intermediate: Inheritance Example</h3>
+      <pre><code class="language-python">class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Employee(Person):
+    def __init__(self, name, job):
+        super().__init__(name)
+        self.job = job
+
+e = Employee("John", "Engineer")
+print(e.name, e.job)</code></pre>
+
+      <h3>✅ Advanced: Abstract Class Challenge</h3>
+      <pre><code class="language-python">from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+c = Circle(3)
+print(c.area())</code></pre>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>📌 Review Checklist</h2>
+      <ul>
+        <li>✅ Understand the class-object relationship</li>
+        <li>✅ Can use <code>__init__</code> for constructors</li>
+        <li>✅ Know the difference between class and instance attributes</li>
+        <li>✅ Understand inheritance and polymorphism</li>
+        <li>✅ Able to define and use abstract classes</li>
+        <li>✅ Comfortable with encapsulation and private variables</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="quote">
+      <h2>💬 Final Wisdom</h2>
+      <blockquote>🧠 “OOP in Python lets you design systems that are scalable, reusable, and clean. Think in objects, build in patterns, and you’ll craft code that evolves with your ideas.”</blockquote>
+    </section>
+    <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+  </div>
+</body>
+</html>

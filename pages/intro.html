@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+ header h1 {
+  background: #007acc;
+  color: white;
+  font-size:2rem;
+  margin:0;
+  padding: 2rem;
+  text-align: center;
+}
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+}
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-left: 5px solid #007acc;
+  background: #f9f9f9;
+}
+h1, h2, h3 {
+  color: #007acc;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+}
+pre {
+  background: #f0f0f0;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+code {
+  font-family: monospace;
+  color: #000;
+}
+details {
+  margin-top: 1rem;
+  background: #e0ffe0;
+  padding: 0.75rem;
+  border: 1px solid #b2d8b2;
+  border-radius: 4px;
+}
+blockquote {
+  background: #e6f7ff;
+  border-left: 6px solid #007acc;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-style: italic;
+}
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+  </style>
+  <title>Introduction to Python</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🔰 Introduction to Python Programming</h1>
+  </header>
+  <main>
+    <section>
+      <h2>🧠 What is Python?</h2>
+      <p><strong>Python</strong> is a high-level, general-purpose programming language known for its <strong>simplicity and readability</strong>. It was created by <strong>Guido van Rossum</strong> and first released in <strong>1991</strong>.</p>
+      <p>Whether you're a beginner learning your first language or a professional building complex systems, Python has the <strong>tools and libraries</strong> to support you.</p>
+    </section>
+
+    <section>
+      <h2>💡 Why Learn Python?</h2>
+      <table>
+        <tr><th>✅ Feature</th><th>🚀 Benefit</th></tr>
+        <tr><td>Easy to Read</td><td>Clean syntax like plain English</td></tr>
+        <tr><td>Versatile</td><td>Use it for websites, data, AI, games, automation</td></tr>
+        <tr><td>Large Community</td><td>Tons of support, libraries, forums</td></tr>
+        <tr><td>In-demand Skill</td><td>Used by Google, NASA, Netflix</td></tr>
+        <tr><td>Cross-Platform</td><td>Runs on Windows, macOS, Linux</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🌍 Where is Python Used?</h2>
+      <table>
+        <tr><th>Use Case</th><th>Example</th></tr>
+        <tr><td>Web Development</td><td>Django, Flask</td></tr>
+        <tr><td>Data Science</td><td>Pandas, NumPy, Matplotlib</td></tr>
+        <tr><td>Machine Learning & AI</td><td>TensorFlow, scikit-learn</td></tr>
+        <tr><td>Automation</td><td>Web scraping, scripting</td></tr>
+        <tr><td>Game Dev</td><td>Pygame</td></tr>
+        <tr><td>IoT & Hardware</td><td>Raspberry Pi</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🛠️ Installing Python</h2>
+      <ol>
+        <li>Go to the <a href="https://python.org" target="_blank">official Python website</a></li>
+        <li>Click <strong>Download Python 3.x.x</strong></li>
+        <li>Run the installer and <strong>check "Add Python to PATH"</strong></li>
+        <li>Verify in terminal: <pre><code>python --version</code></pre></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>✍️ Your First Python Program</h2>
+      <pre><code>print("Hello, world!")</code></pre>
+      <p>🎉 Congratulations, you just wrote your first Python program!</p>
+    </section>
+
+    <section>
+      <h2>🔤 Python Basics</h2>
+      <h3>🧮 Variables and Data Types</h3>
+      <pre><code>name = "Alice"
+age = 25
+height = 5.6
+is_student = True</code></pre>
+
+      <h3>✏️ Input and Output</h3>
+      <pre><code>name = input("What's your name? ")
+print("Nice to meet you, " + name + "!")</code></pre>
+
+      <h3>🔧 Operators</h3>
+      <pre><code>a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)</code></pre>
+    </section>
+
+    <section>
+      <h2>🔁 Control Structures</h2>
+      <h3>🧪 If-Else</h3>
+      <pre><code>age = int(input("Enter your age: "))
+if age >= 18:
+    print("You're an adult.")
+else:
+    print("You're a minor.")</code></pre>
+
+      <h3>🔄 Loops</h3>
+      <pre><code>for i in range(5):
+    print("Step", i)
+
+count = 0
+while count < 3:
+    print("Counting", count)
+    count += 1</code></pre>
+    </section>
+
+    <section>
+      <h2>🧰 Functions</h2>
+      <pre><code>def greet(name):
+    print("Hello, " + name + "!")
+
+greet("Alice")</code></pre>
+    </section>
+
+    <section>
+      <h2>📁 Python File Structure</h2>
+      <p>Save files with <code>.py</code> extension and run with:</p>
+      <pre><code>python filename.py</code></pre>
+    </section>
+
+    <section>
+      <h2>🧪 Mini Practice Quiz</h2>
+      <pre><code>x = 7
+if x % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</code></pre>
+      <details><summary>✅ Answer</summary><p>Odd</p></details>
+    </section>
+
+    <section>
+      <h2>🎯 Practice Task</h2>
+      <pre><code>a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+print("Sum:", a + b)
+print("Product:", a * b)</code></pre>
+    </section>
+
+    <section>
+      <h2>🚀 Where to Go From Here</h2>
+      <table>
+        <tr><th>📘 Topic</th><th>💡 What You'll Learn</th></tr>
+        <tr><td>Variables & Data Types</td><td>Lists, dictionaries</td></tr>
+        <tr><td>Control Structures</td><td>Advanced logic</td></tr>
+        <tr><td>Functions</td><td>Scope, return values</td></tr>
+        <tr><td>Collections</td><td>Tuples, sets</td></tr>
+        <tr><td>OOP</td><td>Classes, objects</td></tr>
+        <tr><td>Modules</td><td>Reusable code</td></tr>
+        <tr><td>File Handling</td><td>Read/write files</td></tr>
+        <tr><td>Exception Handling</td><td>Error resilience</td></tr>
+        <tr><td>Projects</td><td>Build real apps</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔚 Final Words</h2>
+      <blockquote>🧠 "Everyone starts at zero. You’re already ahead by choosing to learn Python."</blockquote>
+    </section>
+
+<iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

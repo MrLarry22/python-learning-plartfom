@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="">
+     <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #007acc;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 6px;
+    margin-top: 40px;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #333;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    overflow-x: auto;
+    border-left: 4px solid #007acc;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px 12px;
+}
+
+th {
+    background-color: #007acc;
+    color: white;
+}
+
+blockquote {
+    border-left: 4px solid #007acc;
+    background-color: #f0f8ff;
+    padding: 10px 20px;
+    font-style: italic;
+}
+
+     </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>🧮 Python Variables and Data Types</h1>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>📌 1. What is a Variable?</h2>
+            <p>A <strong>variable</strong> is a name that refers to a value stored in memory.</p>
+            <pre><code>name = "Alice"
+age = 25</code></pre>
+        </section>
+
+        <section>
+            <h2>🏷️ 2. Naming Variables</h2>
+            <h3>✅ Valid Names:</h3>
+            <ul>
+                <li>Begin with a letter or underscore</li>
+                <li>Contain letters, digits, and underscores</li>
+                <li>Are case-sensitive</li>
+            </ul>
+            <pre><code>first_name = "John"
+_firstName = "Amy"
+user2 = "Kevin"</code></pre>
+
+            <h3>❌ Invalid Names:</h3>
+            <pre><code>2name = "Wrong"
+user-name = "Error"
+class = "Keyword"</code></pre>
+
+            <h3>✅ Best Practices:</h3>
+            <ul>
+                <li>Use descriptive names</li>
+                <li>Use snake_case</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧠 3. Python is Dynamically Typed</h2>
+            <p>You don't declare data types explicitly—Python infers them.</p>
+            <pre><code>age = 20
+pi = 3.14
+name = "Alice"</code></pre>
+            <pre><code>x = 5
+x = "Now I'm a string"</code></pre>
+        </section>
+
+        <section>
+            <h2>🔢 4. Core Data Types</h2>
+            <h3>1️⃣ Integers</h3>
+            <pre><code>score = 100
+temperature = -10</code></pre>
+
+            <h3>2️⃣ Floats</h3>
+            <pre><code>height = 5.9
+average = 4.5</code></pre>
+
+            <h3>3️⃣ Strings</h3>
+            <pre><code>greeting = "Hello"
+language = 'Python'
+bio = """This is
+a multi-line string."""</code></pre>
+
+            <h3>4️⃣ Booleans</h3>
+            <pre><code>is_admin = True
+is_logged_in = False</code></pre>
+        </section>
+
+        <section>
+            <h2>🧩 5. Complex Data Types</h2>
+            <h3>📋 Lists</h3>
+            <pre><code>fruits = ["apple", "banana", "cherry"]
+print(fruits[0])</code></pre>
+
+            <h3>🔐 Tuples</h3>
+            <pre><code>colors = ("red", "green", "blue")</code></pre>
+
+            <h3>🧰 Dictionaries</h3>
+            <pre><code>person = {"name": "Alice", "age": 25}
+print(person["name"])</code></pre>
+
+            <h3>🔁 Sets</h3>
+            <pre><code>unique_numbers = {1, 2, 3, 3}
+print(unique_numbers)</code></pre>
+        </section>
+
+        <section>
+            <h2>🔎 6. Type Checking and Conversion</h2>
+            <pre><code>x = 5
+print(type(x))</code></pre>
+            <pre><code>str_num = "10"
+int_num = int(str_num)
+float_num = float("3.14")
+string = str(123)
+boolean = bool(0)</code></pre>
+        </section>
+
+        <section>
+            <h2>🌍 7. Variable Scope</h2>
+            <h3>🔹 Local</h3>
+            <pre><code>def greet():
+    message = "Hello"
+    print(message)</code></pre>
+
+            <h3>🔸 Global</h3>
+            <pre><code>language = "Python"
+def show():
+    print(language)</code></pre>
+
+            <h3>⚠️ Modifying Global</h3>
+            <pre><code>count = 0
+def increment():
+    global count
+    count += 1</code></pre>
+        </section>
+
+        <section>
+            <h2>🧹 8. Memory Management</h2>
+            <pre><code>a = [1, 2, 3]
+b = a
+del a</code></pre>
+        </section>
+
+        <section>
+            <h2>❗ 9. Common Mistakes</h2>
+            <table>
+                <tr><th>Mistake</th><th>Fix</th></tr>
+                <tr><td>3 + "3"</td><td>Convert to same type</td></tr>
+                <tr><td>name = Alice</td><td>Use quotes</td></tr>
+                <tr><td>print(naem)</td><td>Check spelling</td></tr>
+                <tr><td>tuple[0] = 1</td><td>Tuples are immutable</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>✍️ 10. Practice Exercises</h2>
+            <h3>✅ Task 1</h3>
+            <pre><code>name = "John"
+age = 30
+is_student = False</code></pre>
+
+            <h3>✅ Task 2</h3>
+            <pre><code>print(type("Python"))
+print(type(3.14))
+print(type(True))</code></pre>
+
+            <h3>✅ Task 3</h3>
+            <pre><code>x = "10"
+y = int(x)
+print(y + 5)</code></pre>
+        </section>
+
+        <section>
+            <h2>🌟 11. Best Practices</h2>
+            <ul>
+                <li>✅ Use descriptive names</li>
+                <li>✅ snake_case convention</li>
+                <li>❌ Avoid one-letter names unless needed</li>
+                <li>✅ Initialize variables before use</li>
+                <li>✅ Use type checking</li>
+            </ul>
+        </section>
+
+        <section class="closing">
+            <h2>🧠 Final Advice</h2>
+            <blockquote>
+                <em>Variables are the building blocks of your code. Understand how to name, assign, and use them properly—and you’ll have unlocked the first major milestone in your Python journey.</em>
+            </blockquote>
+        </section>
+        <iframe src="https://trinket.io/embed/python/3d8d7ce66b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+    </main>
+
+</body>
+</html>
